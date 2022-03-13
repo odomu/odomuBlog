@@ -264,7 +264,7 @@ sidebar:
           url: friends/
         - name: 文章说说
           icon: fad fa-user-tie GREENSEA fa-fw
-          url: shuoshuo/
+          url: artitalk/
     # webinfo widget
     webinfo:
       class: webinfo
