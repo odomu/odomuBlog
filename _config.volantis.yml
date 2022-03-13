@@ -193,9 +193,9 @@ comments:
    service:
 #   valine:
 #     path: /
-#     appId: 9sazm8qFY8fkdXTt8B8smopI-MdYXbMMI
-#     appKey: WL9fTHWmTb8ndeJTSkmWwzK8
-#     serverURLs: https://9sazm8qf.api.lncldglobal.com
+#     app_id: YUYnaaTyd8MI9tivdEx2Ofmo-MdYXbMMI
+#     app_key: 3a4spbiv5QkvDhhVsXfknvRg
+#     serverURLs: https://leancloud.odomu.ml
 #     requiredFields: [ nick ]
 
 sidebar:
@@ -206,12 +206,12 @@ sidebar:
     blogger:
       class: blogger
       display: [desktop, mobile] # [desktop, mobile]
-      avatar: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
-      shape: rectangle # circle, rectangle
+      avatar: https://avatars.githubusercontent.com/u/50035498?s=400&u=d41946e4d7523ed5cf9bf33c4bbb3157d20ba98e&v=4
+      shape: circle # circle, rectangle
       url: /about/
       title:
-      subtitle:
-      jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
+      subtitle: '心之所向,素履以往'
+      jinrishici: false # Poetry Today. You can set a string, and it will be displayed when loading fails.
       social:
         - icon: fa-solid fa-rss
           url: /atom.xml
@@ -456,4 +456,4 @@ analytics:
   leancloud:
     app_id: YUYnaaTyd8MI9tivdEx2Ofmo-MdYXbMMI
     app_key: 3a4spbiv5QkvDhhVsXfknvRg
-    custom_api_server: # 一般不需要写，除非自定义了 API Server
+    custom_api_server: https://leancloud.odomu.ml # 一般不需要写，除非自定义了 API Server
