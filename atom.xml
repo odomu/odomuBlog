@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Odomu&#39;s Blog</title>
-  <icon>https://odomu.ml/icon.png</icon>
+  <icon>https://blog.odomu.ml/icon.png</icon>
   
-  <link href="https://odomu.ml/atom.xml" rel="self"/>
+  <link href="https://blog.odomu.ml/atom.xml" rel="self"/>
   
-  <link href="https://odomu.ml/"/>
+  <link href="https://blog.odomu.ml/"/>
   <updated>2022-03-13T02:14:36.624Z</updated>
-  <id>https://odomu.ml/</id>
+  <id>https://blog.odomu.ml/</id>
   
   <author>
     <name>odomu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://odomu.ml/2022/03/07/hello-world/"/>
-    <id>https://odomu.ml/2022/03/07/hello-world/</id>
+    <link href="https://blog.odomu.ml/2022/03/07/hello-world/"/>
+    <id>https://blog.odomu.ml/2022/03/07/hello-world/</id>
     <published>2022-03-07T03:04:19.006Z</published>
     <updated>2022-03-13T02:14:36.624Z</updated>
     
@@ -35,11 +35,11 @@
     
     
     
-    <category term="program" scheme="https://odomu.ml/tags/program/"/>
+    <category term="program" scheme="https://blog.odomu.ml/tags/program/"/>
     
-    <category term="diary" scheme="https://odomu.ml/tags/diary/"/>
+    <category term="diary" scheme="https://blog.odomu.ml/tags/diary/"/>
     
-    <category term="web" scheme="https://odomu.ml/tags/web/"/>
+    <category term="web" scheme="https://blog.odomu.ml/tags/web/"/>
     
   </entry>
   

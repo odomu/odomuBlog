@@ -3,12 +3,12 @@
 
 
     <sitemap>
-        <loc>https://odomu.ml/post-sitemap.xml</loc>
+        <loc>https://blog.odomu.ml/post-sitemap.xml</loc>
         <lastmod>2022-03-13T02:14:36.624Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>https://odomu.ml/page-sitemap.xml</loc>
+        <loc>https://blog.odomu.ml/page-sitemap.xml</loc>
         <lastmod>2022-03-13T12:55:17.446Z</lastmod>
     </sitemap>
 
