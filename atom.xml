@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Odomu&#39;s Blog</title>
+  <icon>https://odomu.ml/icon.png</icon>
+  
+  <link href="https://odomu.ml/atom.xml" rel="self"/>
+  
+  <link href="https://odomu.ml/"/>
+  <updated>2022-03-13T02:14:36.624Z</updated>
+  <id>https://odomu.ml/</id>
+  
+  <author>
+    <name>odomu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://odomu.ml/2022/03/07/hello-world/"/>
+    <id>https://odomu.ml/2022/03/07/hello-world/</id>
+    <published>2022-03-07T03:04:19.006Z</published>
+    <updated>2022-03-13T02:14:36.624Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="program" scheme="https://odomu.ml/tags/program/"/>
+    
+    <category term="diary" scheme="https://odomu.ml/tags/diary/"/>
+    
+    <category term="web" scheme="https://odomu.ml/tags/web/"/>
+    
+  </entry>
+  
+</feed>
