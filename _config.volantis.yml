@@ -190,13 +190,13 @@ article:
 
 
 comments:
-  service: valine
-  valine:
-    path: /
-    appId: 9sazm8qFY8fkdXTt8B8smopI-MdYXbMMI
-    appKey: WL9fTHWmTb8ndeJTSkmWwzK8
-    serverURLs: https://9sazm8qf.api.lncldglobal.com
-    requiredFields: [ nick ]
+   service:
+#   valine:
+#     path: /
+#     appId: 9sazm8qFY8fkdXTt8B8smopI-MdYXbMMI
+#     appKey: WL9fTHWmTb8ndeJTSkmWwzK8
+#     serverURLs: https://9sazm8qf.api.lncldglobal.com
+#     requiredFields: [ nick ]
 
 sidebar:
   for_page: [blogger, guide, lastupdate, webinfo]
