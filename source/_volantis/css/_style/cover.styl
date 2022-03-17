@@ -1,0 +1,42 @@
+// 导航栏铺满整个屏幕，只在大于 2048px 分辨率下出现
+.l_header
+  @media screen and (max-width: $device-2k)
+    left: 0 !important
+    border-radius: 0 !important
+    max-width: 100% !important
+// 调整移动端的显示，平铺展示
+#safearea
+  @media screen and (max-width: $device-mobile)
+    margin: 0
+    box-shadow: none
+    .body-wrapper
+      padding: 0
+    #l_main
+      article#comments,
+      article#friends,
+      article#post,
+      article#page,
+      article#arc
+        border-radius: 0
+      article#cat,
+      article#tag
+        margin: 0
+        border-radius: 0
+      .post-wrapper
+        margin: 0 0 16px
+        .post
+          border-radius: 0
+    #l_side
+      .widget.mobile
+        border-radius: 0
+
+// 添加透明度
+#l_header
+  background-color: rgba(255,255,255,0.9)
+#l_main .post,
+#l_side .widget
+  background-color: rgba(255,255,255,0.9)
+  box-shadow: 0 4px 10px -4px #ebedf0
+// 文章不透明
+#post.post
+  background-color: var(--color-card)
