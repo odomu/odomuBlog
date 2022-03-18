@@ -70,7 +70,7 @@ cover:
     home: true
     archive: false
     others: true # can be written in front-matter 'cover: true'
-  background: https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture
+  background: https://images3.alphacoders.com/105/thumb-1920-1051003.jpg
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
   logo: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
   title: "Odomu's Blog"
@@ -449,9 +449,6 @@ plugins:
       pause: fa-light fa-pause light-blue
       error: fa-light fa-exclamation-square red
   darkmode:
-    enable: true
-  # 视差滚动效果 Slide Background
-  parallax:
     enable: true
 
 analytics:
