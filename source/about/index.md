@@ -1,40 +1,22 @@
 ---
-layout: docs
-seo_title: 关于本站
-bottom_meta: false
-sidebar: []
-valine:
-placeholder: 有什么想对我说的呢？
+title: 关于
+sidebar: [ghuser, welcome]
+header: false # 不显示左上角的 logo 和 menu
+menu_id: about
 ---
+{% tabs active:1 align:center %}
+<!-- tab 关于 -->
+{% about avatar:https://avatars.githubusercontent.com/u/50035498?v=4 height:80px %}
+<img height="32px" alt="XAOXUU" src="https://avatars.githubusercontent.com/u/50035498?v=4">
+**如果宇宙中真有什么终极的逻辑，那就是我们终有一天会在舰桥上重逢，直到生命终结。**
+{% endabout %}
 
-<center>
-{% span large red, Odomu's %}
-{% span large yellow, Blog %}
-{% p small, 心之所向 素履以往，生如逆旅 一苇以航 %}
-</center>
-<br>
-
-{% tabs tab-1 %}
-<!-- tab <i class="fa fa-bath" aria-hidden="true"></i> 关于我 -->
+<!-- tab 时间线 -->
 {% timeline %}
-{% timenode 2022-02-01 升级主题 %}
-升级博客主题版本到 5.0.0-rc.3
-{% endtimenode %}
-{% timenode 2022-01-01 博客建立 %}
-1. Hexo和Volantis theme 创建博客
-2. 博客部署到Github Pages, 并使用netlify加速博客
-{% endtimenode %}
+<!-- node 2023 年 1 月 1 日 -->
+博客主题切换为[stellar](https://xaoxuu.com/wiki/stellar)
+<!-- node 2021 年 10 月 1 日 -->
+博客正式上线，采用Hexo + Vercel的方式部署博客，主题采用[Volantis](https://volantis.js.org)
 {% endtimeline %}
-<!-- endtab -->
 
-<!-- tab <i class="fa fa-thermometer" aria-hidden="true"></i> 站点状态 -->
-{% radio red checked, 实时监控本站运行状态 %}
-<iframe
-    src="https://odomu.instatus.com/embed-status/light-md"
-    width="230"
-    height="61"
-    frameBorder="0"
-    scrolling="no"
-    style="border: none;"></iframe>
-<!-- endtab -->
 {% endtabs %}

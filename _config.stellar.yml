@@ -1,0 +1,166 @@
+######## Sidebar ########
+sidebar:
+  logo:
+    avatar: '[https://avatars.githubusercontent.com/u/50035498?v=4](/about/)'
+    title: '[Odomuの小栈](/)'
+  menu:
+    post: '[文章](/)'
+    notes: '[笔记](/notes)'
+    about: '[关于](/about)'
+  # Sidebar widgets
+  widgets:
+    #### 自动生成的页面 ####
+    # 主页
+    home: search, welcome, recent, tagcloud # for home
+    # 博客索引页
+    blog_index: search_blog, recent # for categories/tags/archives
+    # 文档索引页
+    wiki_index: search_docs, recent # for wiki
+    # 其它（404）
+    others: search, recent, tagcloud # for 404 and ...
+    #### 手动创建的页面 ####
+    # 文章内页 layout:post
+    post: search_blog, toc
+    # 文档内页 layout:wiki
+    wiki: search, toc, related
+    # 其它 layout:page
+    page: search, toc
+
+######## Index ########
+post-index: # 近期发布 分类 标签 归档 and ...
+  '朋友': /friends
+
+######## Article ########
+article:
+  # 如果没有指定封面，是否根据 tags 作为关键词搜索封面图片？
+  auto_cover: false # search from https://source.unsplash.com/
+  # 如果没有指定横幅，是否根据 tags 作为关键词搜索横幅图片？
+  auto_banner: false # search from https://source.unsplash.com/
+  # 如果没有指定 excerpt 和 description，将自动取多长的内容作为文章摘要？
+  auto_excerpt: 200
+  # 分类颜色
+  category_color:
+    '探索号': '#f44336'
+  # 文章许可协议
+  license: '本文采用 [署名-非商业性使用-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
+  # 分享
+  share: # [wechat, weibo, email, link]
+  # 相关文章，需要安装插件 (for layout: post)
+  # npm i hexo-related-popular-posts
+  related_posts:
+    enable: true
+    title: 您可能感兴趣的文章
+    max_count: 5
+
+search:
+  service: local_search # local_search, todo...
+  local_search: # 在 front-matter 中设置 indexing:false 来避免被搜索索引
+    field: all # post, page, all
+    path: /search.json # 搜索文件存放位置
+    content: true # 是否搜索内容
+
+######## Comments ########
+comments:
+  service: waline # beaudar, utterances, giscus, twikoo, waline, artalk
+  # Waline https://waline.js.org/
+  waline:
+    js: https://unpkg.com/@waline/client@v2/dist/waline.js
+    css: https://unpkg.com/@waline/client@v2/dist/waline.css
+    # Waline server address url, you should set this to your own link
+    serverURL: https://waline-shfa.vercel.app
+    # If false, comment count will only be displayed in post page, not in home page
+    commentCount: true
+    # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`.
+    pageview: true # 浏览量统计
+
+######## Footer ########
+footer:
+  sitemap:
+    '博客':
+      - '[文章](/)'
+      - '[分类](/categories)'
+      - '[标签](/tags)'
+      - '[归档](/archives)'
+    '社交':
+      - '[友链](/friends)'
+    '更多':
+      - '[关于本站](/about)'
+      - '[GitHub](https://github.com/odmou)'
+  content: | # 支持 Markdown 格式
+    本站由 [@Odomu](/) 使用 [Stellar](https://github.com/xaoxuu/hexo-theme-stellar) 主题创建。
+    本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
+  # 主题用户越多，开发者维护和更新的积极性就越高，如果您喜欢本主题，请在适当的位置显示主题信息和仓库链接以表支持。
+
+
+######## Tag Plugins ########
+tag_plugins:
+  # {% ablock %} / {% note %}
+  note:
+    default_color: '' # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
+    border: true # true / false
+  # {% checkbox %}
+  checkbox:
+    interactive: false # enable interactive for user
+  # {% quot %}
+  quot:
+    default: # 可以自行配置多种图标方案
+      prefix: https://bu.dusays.com/2022/10/24/63567d3e092ff.png
+      suffix: https://bu.dusays.com/2022/10/24/63567d3e0ab55.png
+    hashtag:
+      prefix: https://bu.dusays.com/2022/10/24/63567d3e07da3.png
+  # {% emoji %}
+  emoji:
+    default: https://gcore.jsdelivr.net/gh/cdn-x/emoji/qq/${name}.gif
+    twemoji: https://gcore.jsdelivr.net/gh/twitter/twemoji/assets/svg/${name}.svg
+    qq: https://gcore.jsdelivr.net/gh/cdn-x/emoji/qq/${name}.gif
+    aru: https://gcore.jsdelivr.net/gh/cdn-x/emoji/aru-l/${name}.gif
+    tieba: https://gcore.jsdelivr.net/gh/cdn-x/emoji/tieba/${name}.png
+    blobcat: https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs/${name}.png
+  # {% image %}
+  image:
+    fancybox: true # true, false
+  # {% timeline %}
+  timeline:
+    max-height: 80vh
+  # {% mark %}
+  mark:
+    default_color: dark # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
+  # {% tag %}
+  tag:
+    default_color: yellow # red, orange, yellow, green, cyan, blue, purple
+
+style:
+  darkmode: false # auto / always / false
+  smooth_scroll: true # true / false
+  font-size:
+    root: 16px
+    body: .9375rem # 15px
+    code: 85% # 14px
+    codeblock: 0.8125rem # 13px
+  font-family:
+    logo: 'system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
+    body: 'system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
+    code: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
+    codeblock: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
+  text-align: left
+  border-radius:
+    card: 12px
+    block: 12px
+    bar: 6px
+    image: 6px
+  color:
+    # 动态颜色（会根据明暗主题重设明度值，只用关心色相和饱和度即可）
+    background: 'hsl(212 16% 98%)' # 浅色背景颜色
+    block: 'hsl(212 8% 95%)' # 块背景颜色
+    code: 'hsl(14 100% 48%)' # 行内代码颜色
+    text: 'hsl(0 0% 20%)' # 文本颜色
+    # 主题色配置（不会根据明暗动态调整，请设置为通用的颜色）
+    theme: 'hsl(192 98% 55%)' # 主题色
+    accent: 'hsl(14 100% 57%)' # 强调色
+    link: 'hsl(207 90% 54%)' # 超链接颜色
+    button: 'hsl(192 98% 55%)' # 按钮颜色
+    hover: 'hsl(14 100% 57%)' # 按钮高亮颜色
+api_host:
+  ghapi: https://api.github.com
+  ghraw: https://raw.githubusercontent.com
+  gist: https://gist.github.com

@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Odomu's Blog
+title: Odomuの小栈
 subtitle: ''
 description: '一个记录个人生活和笔记的博客!'
 keywords:
 author: odomu
 language: zh-CN
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -45,11 +45,12 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
+
 prismjs:
   enable: false
   preprocess: true
@@ -97,31 +98,13 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: volantis
-
-# 全局导入
-import:
-  link:
-    - <link href="https://cdn.jsdelivr.net/gh/inkss/common@1/css/roboto.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    - <link href="https://cdn.jsdelivr.net/gh/inkss/common@1/css/jetbrains.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-
-# hexo-offline-popup
-service_worker:
-  maximumFileSizeToCacheInBytes: 5242880
-  staticFileGlobs:
-    - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
-  stripPrefix: public
-  verbose: true
+theme: stellar
 
 # nofollow
 nofollow:
   enable: false
   exclude:
     - odomu.ml
-
-# hexo-related-popular-posts
-popularPosts:
-  eyeCatchImageAttributeName: headimg
 
 # hexo-generator-seo-friendly-sitemap
 sitemap:
