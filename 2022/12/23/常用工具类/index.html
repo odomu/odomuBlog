@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>常用工具类 - Odomuの小栈</title>
+
+  
+    <meta name="description" content="常用工具类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用工具类">
+<meta property="og:url" content="https://blog.odomu.ml/2022/12/23/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB/index.html">
+<meta property="og:site_name" content="Odomuの小栈">
+<meta property="og:description" content="常用工具类">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-12-22T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-11T01:59:01.685Z">
+<meta property="article:author" content="odomu">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Odomuの小栈" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://avatars.githubusercontent.com/u/50035498?v=4" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Odomuの小栈</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/notes">笔记</a><a class="nav-item" href="/about">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">常用工具类</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HttpUtil-%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="toc-text">HttpUtil(连接池)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li></ol></div></div></widget>
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-12-22T16:00:00.000Z">2022-12-23</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>常用工具类</span></h1>
+<h2 id="HttpUtil-连接池"><a href="#HttpUtil-连接池" class="headerlink" title="HttpUtil(连接池)"></a>HttpUtil(连接池)</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 带连接池的http访问工具</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HttpUtil</span> &#123;</span><br><span class="line">    <span class="comment">// PHttpClient连接池管理</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">PoolingHttpClientConnectionManager</span> <span class="variable">cm</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">// httpClient</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">CloseableHttpClient</span> <span class="variable">httpClient</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">// 默认超时时间</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">DEFAULT_TIME_OUT</span> <span class="operator">=</span> <span class="number">60</span>;</span><br><span class="line">    <span class="comment">// 最大连接数</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">COUNT</span> <span class="operator">=</span> <span class="number">60</span>;</span><br><span class="line">    <span class="comment">// 最多连接数</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">TOTAL_COUNT</span> <span class="operator">=</span> <span class="number">80</span>;</span><br><span class="line">    <span class="comment">// 连接存活时间</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">HTTP_DEFAULT_KEEP_TIME</span> <span class="operator">=</span> <span class="number">15</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 初始化连接池</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">initPools</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="keyword">if</span> (httpClient == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="comment">// 忽略https证书验证</span></span><br><span class="line">            <span class="type">SSLContext</span> <span class="variable">sslContext</span> <span class="operator">=</span> SSLContexts.custom().useTLS().loadTrustMaterial(<span class="literal">null</span>, (x509Certificates, s) -&gt; <span class="literal">true</span>).build();</span><br><span class="line">            Registry&lt;ConnectionSocketFactory&gt; registry = RegistryBuilder.&lt;ConnectionSocketFactory&gt;create()</span><br><span class="line">                    .register(<span class="string">&quot;http&quot;</span>, PlainConnectionSocketFactory.getSocketFactory())</span><br><span class="line">                    .register(<span class="string">&quot;https&quot;</span>, <span class="keyword">new</span> <span class="title class_">SSLConnectionSocketFactory</span>(sslContext, SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER))</span><br><span class="line">                    .build();</span><br><span class="line">            <span class="comment">// 开启连接池</span></span><br><span class="line">            cm = <span class="keyword">new</span> <span class="title class_">PoolingHttpClientConnectionManager</span>(registry);</span><br><span class="line">            cm.setDefaultMaxPerRoute(COUNT);</span><br><span class="line">            cm.setMaxTotal(TOTAL_COUNT);</span><br><span class="line">            <span class="comment">// 设置连接重试</span></span><br><span class="line">            <span class="type">HttpRequestRetryHandler</span> <span class="variable">httpRequestRetryHandler</span> <span class="operator">=</span> (exception, executionCount, context) -&gt; &#123;</span><br><span class="line">                <span class="keyword">if</span> (executionCount &gt;= <span class="number">3</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (exception <span class="keyword">instanceof</span> NoHttpResponseException) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (exception <span class="keyword">instanceof</span> SSLHandshakeException) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (exception <span class="keyword">instanceof</span> InterruptedIOException) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (exception <span class="keyword">instanceof</span> UnknownHostException) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (exception <span class="keyword">instanceof</span> ConnectTimeoutException) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (exception <span class="keyword">instanceof</span> SSLException) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="type">HttpClientContext</span> <span class="variable">clientContext</span> <span class="operator">=</span> HttpClientContext.adapt(context);</span><br><span class="line">                    <span class="type">HttpRequest</span> <span class="variable">request</span> <span class="operator">=</span> clientContext.getRequest();</span><br><span class="line">                    <span class="keyword">return</span> !(request <span class="keyword">instanceof</span> HttpEntityEnclosingRequest);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="comment">// 创建httpClient</span></span><br><span class="line">            httpClient = HttpClients.custom()</span><br><span class="line">                    .setConnectionManager(cm)</span><br><span class="line">                    .setKeepAliveStrategy(connectionKeepAliveStrategy)</span><br><span class="line">                    .setRetryHandler(httpRequestRetryHandler)</span><br><span class="line">                    .evictExpiredConnections()</span><br><span class="line">                    .evictIdleConnections(<span class="number">30</span>, TimeUnit.SECONDS)</span><br><span class="line">                    .build();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> CloseableHttpClient <span class="title function_">getHttpClient</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> httpClient;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> PoolingHttpClientConnectionManager <span class="title function_">getHttpConnectionManager</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> cm;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">doPost</span><span class="params">(String url,</span></span><br><span class="line"><span class="params">                                Map&lt;String, String&gt; params,</span></span><br><span class="line"><span class="params">                                Map&lt;String, String&gt; headers,</span></span><br><span class="line"><span class="params">                                String contentType,</span></span><br><span class="line"><span class="params">                                <span class="type">int</span> timeout)</span> &#123;</span><br><span class="line">        List&lt;NameValuePair&gt; pairs = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (ObjectUtil.isNotEmpty(params)) &#123;</span><br><span class="line">            <span class="keyword">for</span> (String key : params.keySet()) &#123;</span><br><span class="line">                pairs.add(<span class="keyword">new</span> <span class="title class_">BasicNameValuePair</span>(key, params.get(key)));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> executePost(url, pairs, headers, contentType, timeout);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 执行post请求</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> uri 请求链接</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> pairs 请求参数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> headers 请求头</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> contentType 内容类型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> timeout 请求超时</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 请求结果</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">executePost</span><span class="params">(String uri,</span></span><br><span class="line"><span class="params">                                     List&lt;NameValuePair&gt; pairs,</span></span><br><span class="line"><span class="params">                                     Map&lt;String, String&gt; headers,</span></span><br><span class="line"><span class="params">                                     String contentType,</span></span><br><span class="line"><span class="params">                                     <span class="type">int</span> timeout)</span> &#123;</span><br><span class="line">        <span class="type">HttpEntity</span> <span class="variable">httpEntity</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">HttpEntityEnclosingRequestBase</span> <span class="variable">method</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">responseBody</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (httpClient == <span class="literal">null</span>) &#123;</span><br><span class="line">                initPools();</span><br><span class="line">            &#125;</span><br><span class="line">            contentType = contentType == <span class="literal">null</span> ? MediaType.APPLICATION_FORM_URLENCODED_VALUE : contentType;</span><br><span class="line">            method = (HttpEntityEnclosingRequestBase) getRequestMethod(uri, HttpPost.METHOD_NAME, contentType, timeout, headers);</span><br><span class="line">            <span class="type">StringEntity</span> <span class="variable">stringEntity</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            <span class="comment">// 判断是否json</span></span><br><span class="line">            <span class="keyword">if</span> (MediaType.APPLICATION_JSON_UTF8_VALUE.contains(contentType)) &#123;</span><br><span class="line">                <span class="type">JSONObject</span> <span class="variable">paramMap</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JSONObject</span>();</span><br><span class="line">                <span class="keyword">if</span> (pairs != <span class="literal">null</span> &amp;&amp; pairs.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (NameValuePair pair : pairs) &#123;</span><br><span class="line">                        paramMap.put(pair.getName(), pair.getValue());</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">String</span> <span class="variable">string</span> <span class="operator">=</span> (pairs != <span class="literal">null</span> &amp;&amp; pairs.size() != <span class="number">0</span>) ? paramMap.toString() : <span class="string">&quot;&quot;</span>;</span><br><span class="line">                stringEntity = <span class="keyword">new</span> <span class="title class_">StringEntity</span>(string, ContentType.APPLICATION_JSON);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                stringEntity = <span class="keyword">new</span> <span class="title class_">UrlEncodedFormEntity</span>(pairs, StandardCharsets.UTF_8);</span><br><span class="line">            &#125;</span><br><span class="line">            stringEntity.setContentEncoding(StandardCharsets.UTF_8.name());</span><br><span class="line">            stringEntity.setContentType(contentType);</span><br><span class="line">            method.setEntity(stringEntity);</span><br><span class="line">            <span class="type">HttpContext</span> <span class="variable">context</span> <span class="operator">=</span> HttpClientContext.create();</span><br><span class="line">            <span class="comment">// 发送请求</span></span><br><span class="line">            <span class="type">CloseableHttpResponse</span> <span class="variable">httpResponse</span> <span class="operator">=</span> httpClient.execute(method, context);</span><br><span class="line">            httpEntity = httpResponse.getEntity();</span><br><span class="line">            <span class="keyword">if</span> (httpEntity != <span class="literal">null</span>) &#123;</span><br><span class="line">                responseBody = EntityUtils.toString(httpEntity, StandardCharsets.UTF_8);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="keyword">if</span> (method != <span class="literal">null</span>) &#123;</span><br><span class="line">                method.abort();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (httpEntity != <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    EntityUtils.consumeQuietly(httpEntity);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    log.error(<span class="string">&quot;exception&quot;</span>, e);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> responseBody;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 执行get请求</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> uri 请求链接</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> headers 请求头</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> contentType 内容类型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> timeout 请求超时</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 请求结果</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">executeGet</span><span class="params">(String uri,</span></span><br><span class="line"><span class="params">                                    Map&lt;String, String&gt; headers,</span></span><br><span class="line"><span class="params">                                    String contentType,</span></span><br><span class="line"><span class="params">                                    <span class="type">int</span> timeout)</span> &#123;</span><br><span class="line">        <span class="type">HttpEntity</span> <span class="variable">httpEntity</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">HttpRequestBase</span> <span class="variable">method</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">responseBody</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (httpClient == <span class="literal">null</span>) &#123;</span><br><span class="line">                initPools();</span><br><span class="line">            &#125;</span><br><span class="line">            contentType = contentType == <span class="literal">null</span> ? MediaType.APPLICATION_FORM_URLENCODED_VALUE : contentType;</span><br><span class="line">            method = getRequestMethod(uri, HttpGet.METHOD_NAME, contentType, timeout, headers);</span><br><span class="line">            <span class="type">HttpContext</span> <span class="variable">context</span> <span class="operator">=</span> HttpClientContext.create();</span><br><span class="line">            <span class="type">CloseableHttpResponse</span> <span class="variable">httpResponse</span> <span class="operator">=</span> httpClient.execute(method, context);</span><br><span class="line">            httpEntity = httpResponse.getEntity();</span><br><span class="line">            <span class="keyword">if</span> (httpEntity != <span class="literal">null</span>) &#123;</span><br><span class="line">                responseBody = EntityUtils.toString(httpEntity, StandardCharsets.UTF_8);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="keyword">if</span> (method != <span class="literal">null</span>) &#123;</span><br><span class="line">                method.abort();</span><br><span class="line">            &#125;</span><br><span class="line">            log.error(<span class="string">&quot;exception&quot;</span>, e);</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (httpEntity != <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    EntityUtils.consumeQuietly(httpEntity);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    log.error(<span class="string">&quot;exception&quot;</span>, e);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> responseBody;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">ConnectionKeepAliveStrategy</span> <span class="variable">connectionKeepAliveStrategy</span> <span class="operator">=</span> (response, context) -&gt; &#123;</span><br><span class="line">        <span class="type">HeaderElementIterator</span> <span class="variable">it</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BasicHeaderElementIterator</span>(response.headerIterator(HTTP.CONN_KEEP_ALIVE));</span><br><span class="line">        <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">            <span class="type">HeaderElement</span> <span class="variable">he</span> <span class="operator">=</span> it.nextElement();</span><br><span class="line">            <span class="type">String</span> <span class="variable">param</span> <span class="operator">=</span> he.getName();</span><br><span class="line">            <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> he.getValue();</span><br><span class="line">            <span class="keyword">if</span> (value != <span class="literal">null</span> &amp;&amp; <span class="string">&quot;timeout&quot;</span>.equalsIgnoreCase(param)) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    <span class="keyword">return</span> Long.parseLong(value) * <span class="number">1000</span>;</span><br><span class="line">                &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    log.error(<span class="string">&quot;exception&quot;</span>, e);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> HTTP_DEFAULT_KEEP_TIME * <span class="number">1000L</span>;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取Http请求方法</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> uri 请求链接</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> methodName 请求方式</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> contentType 内容类型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> timeout 超时时间</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> headers 请求头</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> Http请求方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> HttpRequestBase <span class="title function_">getRequestMethod</span><span class="params">(String uri,</span></span><br><span class="line"><span class="params">                                                    String methodName,</span></span><br><span class="line"><span class="params">                                                    String contentType,</span></span><br><span class="line"><span class="params">                                                    <span class="type">int</span> timeout,</span></span><br><span class="line"><span class="params">                                                    Map&lt;String, String&gt; headers)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="keyword">if</span> (httpClient == <span class="literal">null</span>) &#123;</span><br><span class="line">            initPools();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">HttpRequestBase</span> <span class="variable">method</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">if</span> (timeout &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            timeout = DEFAULT_TIME_OUT;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">RequestConfig</span> <span class="variable">requestConfig</span> <span class="operator">=</span> RequestConfig.custom()</span><br><span class="line">                .setSocketTimeout(timeout * <span class="number">1000</span>)</span><br><span class="line">                .setConnectTimeout(timeout * <span class="number">1000</span>)</span><br><span class="line">                .setConnectionRequestTimeout(timeout * <span class="number">1000</span>)</span><br><span class="line">                .setContentCompressionEnabled(<span class="literal">true</span>)</span><br><span class="line">                .setRedirectsEnabled(<span class="literal">true</span>)</span><br><span class="line">                .setRelativeRedirectsAllowed(<span class="literal">true</span>)</span><br><span class="line">                .build();</span><br><span class="line">        <span class="keyword">if</span> (HttpPut.METHOD_NAME.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            method = <span class="keyword">new</span> <span class="title class_">HttpPut</span>(uri);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (HttpPost.METHOD_NAME.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            method = <span class="keyword">new</span> <span class="title class_">HttpPost</span>(uri);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (HttpGet.METHOD_NAME.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            method = <span class="keyword">new</span> <span class="title class_">HttpGet</span>(uri);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            method = <span class="keyword">new</span> <span class="title class_">HttpPost</span>(uri);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (contentType == <span class="literal">null</span> || <span class="string">&quot;&quot;</span>.equals(contentType)) &#123;</span><br><span class="line">            contentType = MediaType.APPLICATION_FORM_URLENCODED_VALUE;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (headers != <span class="literal">null</span> &amp;&amp; headers.keySet().size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (String key : headers.keySet()) &#123;</span><br><span class="line">                method.addHeader(key, headers.get(key));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        method.addHeader(<span class="string">&quot;Content-Type&quot;</span>, contentType);</span><br><span class="line">        method.addHeader(<span class="string">&quot;Accept&quot;</span>, contentType);</span><br><span class="line">        method.setConfig(requestConfig);</span><br><span class="line">        <span class="keyword">return</span> method;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2022/12/23/Spring%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/">Spring配置方式</a></div><div class="item" id="next"></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class='header'>
+      <div class='title cap theme'>您可能感兴趣的文章</div>
+    </section>
+    <section class='body'>
+    <div class="related-posts"><a class="item" href="\2022\12\23\Spring配置方式\" title="Spring配置方式"><span class="title">Spring配置方式</span><span class="excerpt">Spring的配置发展</span></a></div></section></div>
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </section>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">文章</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends">友链</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于本站</a><a target="_blank" rel="noopener" href="https://github.com/odmou">GitHub</a></div></div><div class="text"><p>本站由 <a href="/">@Odomu</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function load_comment(){
+    if(!document.getElementById("waline_container"))return;
+    stellar.loadCSS('https://unpkg.com/@waline/client@v2/dist/waline.css');
+    stellar.loadScript('https://unpkg.com/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
+      const el = document.getElementById("waline_container");
+      var path = el.getAttribute('comment_id');
+      if (!path) {
+        path = decodeURI(window.location.pathname);
+      }
+      Waline.init(Object.assign({"js":"https://unpkg.com/@waline/client@v2/dist/waline.js","css":"https://unpkg.com/@waline/client@v2/dist/waline.css","serverURL":"https://waline-shfa.vercel.app","commentCount":true,"pageview":true}, {
+        el: '#waline_container',
+        path: path,
+      }));
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    load_comment();
+  });
+
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Odomuの小栈</title>
+  <icon>https://blog.odomu.ml/icon.png</icon>
+  
+  <link href="https://blog.odomu.ml/atom.xml" rel="self"/>
+  
+  <link href="https://blog.odomu.ml/"/>
+  <updated>2023-01-11T02:17:45.823Z</updated>
+  <id>https://blog.odomu.ml/</id>
+  
+  <author>
+    <name>odomu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring配置方式</title>
+    <link href="https://blog.odomu.ml/2022/12/23/Spring%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/"/>
+    <id>https://blog.odomu.ml/2022/12/23/Spring%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/</id>
+    <published>2022-12-22T16:00:00.000Z</published>
+    <updated>2023-01-11T02:17:45.823Z</updated>
+    
+    
+    <summary type="html">Spring的配置发展</summary>
+    
+    
+    
+    <category term="Spring" scheme="https://blog.odomu.ml/categories/Spring/"/>
+    
+    
+    <category term="学习" scheme="https://blog.odomu.ml/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Java" scheme="https://blog.odomu.ml/tags/Java/"/>
+    
+    <category term="Spring" scheme="https://blog.odomu.ml/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用工具类</title>
+    <link href="https://blog.odomu.ml/2022/12/23/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
+    <id>https://blog.odomu.ml/2022/12/23/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB/</id>
+    <published>2022-12-22T16:00:00.000Z</published>
+    <updated>2023-01-11T01:59:01.685Z</updated>
+    
+    
+    <summary type="html">常用工具类</summary>
+    
+    
+    
+    
+  </entry>
+  
+</feed>
